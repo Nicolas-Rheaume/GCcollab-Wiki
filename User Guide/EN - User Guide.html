@@ -46,7 +46,7 @@
     </table>
   </div>
 
-  <br><p>This <b>User Guide</b> provides the instruction necessary to upload a new technology trend briefing paper. Most of the code is written in HTML using the CSS style. The goal of this page is to provide a step by step guide on how to create a page. [http://hilite.me/ html styler]</p>
+  <br><p>This <b>User Guide</b> provides the instruction necessary to upload a new technology trend briefing paper. Most of the code is written in HTML using the CSS style. The goal of this page is to provide a step by step guide on how to create a page.</p>
 
   <div class="mw-collapsible-toggle btn" style="float: left; display: block;">
     <div class="toggle mw-collapsible-toggle-collapsed" role="button" tabindex="0"><span class="mw-collapsible-text">Hide Detailed View</span></div>
@@ -89,26 +89,16 @@
     <li><b>Adding the code</b> : Navigate to the "Edit Source" tab on top of the page to publish your code. Copy and paste the corresponding code from Visual Studio Code to GCwiki. Pres "Save changes" to publish or "Show preview" to view the resulting code.</li>
   </ul>
 
-  <h3>GCwiki Standards and Norms</h3>
-
-  <ul>
-    <li><b></b></li>
-  </ul>
-
   <h3>Visual Studio Code : Settings and Shortcuts</h3>
 
-  <p>Here are some settings configuration</p>
+  <p>After installing Visual Studio Code, there are some parameters you might want to change and shortcuts you might want to know.</p>
 
   <ul>
-    <li><b>Autocomplete</b> : </li>
+    <li><b>Auto-completion</b> : VS code has an autocomplete feature by default where if you start writing the tag and then press "tab", it will create the starting and closing tag. Ex: div.orange -> <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;orange&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span></li>
+    <li><b>Zoom</b> : To change the zoom level of the interface, press Ctrl+Shift+P to open the command bar and search for "Preferences: open settings (JSON)". In that file, change and save the "window.zoomLevel" to a suitable value.</li>
+    <li><b>autoClosingTags</b> : By default, VS code will recognise and try to close tags. However, this feature may not be suitable. To disable it, go to the same settings.json file as before and set the value to "false".</li>
   </ul>
-
-  <p>Here are some shortcuts to accelerate your process.</p>
-
-  <ul>
-    <li><b>Autocomplete</b> : </li>
-  </ul>
-
+  
   <h2>Basics of HTML and CSS</h2>
 
   <p>This section introduces the fundamentals of HTML and CSS.</p>
@@ -265,7 +255,7 @@
 
   <h3>Paragraph</h3>
 
-  <p>Most paragraph </p>
+  <p>A paragraph tag, denoted by the letter “p”, is opened like all other HTML tags with an opening<nowiki> “<p>” tag and a closing “</p>”</nowiki>. In the brief, when an entire paragraph (as shown below) needs to be uploaded with no special rendering this can be done using the paragraph tag.</p>
 
   <table class="wikitable markupTable">
     <tr>
@@ -278,7 +268,7 @@
     </tr>
   </table>
 
-  <p>Collapsable paragraph</p>
+  <p>In the brief, when an entire paragraph needs to be hidden/collapsible this can be done by making the paragraph tag part of the class “highlighted mw-collapsible-content”. The CSS will render it as seen below.</p>
 
   <table class="wikitable markupTable">
     <tr>
@@ -298,7 +288,7 @@
     </tr>
   </table>
 
-  <p>Collapsable Line</p>
+  <p>When only part of a paragraph needs to be hidden/collapsible the paragraph will need to be separated into several paragraph tags based on if they need to be hidden/collapsible or not. Parts that do not need to be hidden/collapsible will be part of the class “inline”. This allows the CSS to render the entire paragraph as one piece of text. Areas of text requiring still to be hidden/collapsible are made part of the class “highlighted inline mw-collapsible-content”. An example can be seen below.</p>
 
   <table class="wikitable markupTable">
     <tr>
@@ -342,6 +332,14 @@
 
   <h3>List</h3>
 
+  <p><nowiki>Lists can be created in two ways. These are unordered lists which are simply bulleted, and ordered lists which are numbered. Unordered lists like all HTML tags are denoted by an opening “<ul>” tag and a closing “</ul>” tag. In the same manner, ordered lists are opened with an opening “<ol>” tag and a closing “</ol>” tag. The items in the list will be placed within these tags. List items require being individually wrapped in a “<li>” opening tag and closing “</li>” tag. An example of this can be seen below.</nowiki></p>
+
+  <ul>
+    <li><b>ul</b> : unordered list</li>
+    <li><b>ol</b> : ordered list</li>
+    <li><b>li</b> : list item</li>
+  </ul>
+
   <table class="wikitable markupTable">
     <tr>
       <th>Markup</th>
@@ -367,7 +365,7 @@
     </tr>
   </table>
 
-  <p>Collapsable List</p>
+  <p>If elements in the list require being hidden/collapsible the entire list will need to be made as a list of lists. When doing this collapsible items will be placed in a list that is part of the class “highlighted mw-collapsible-content”. An example of this can be seen below.</p>
 
   <table class="wikitable markupTable">
       <tr>
@@ -375,7 +373,7 @@
         <th>Renders as</th>
       </tr>
       <tr>
-        <td class="markup half"><span style="color: #007700">&lt;ul&gt;</span><br/><span style="color: #007700">&nbsp;&lt;li&gt;</span>Element 1<span style="color: #007700">&lt;/li&gt;</span><br/><span style="color: #007700">&lt;/ul&gt;</span><br/><span style="color: #007700">&lt;ul</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;highlighted mw-collapsible-content&quot;</span><span style="color: #007700">&gt;</span><br/><span style="color: #007700">&nbsp;&lt;li&gt;</span>Element 2<span style="color: #007700">&lt;/li&gt;</span><br/><span style="color: #007700">&lt;/ul&gt;</span></td>
+        <td class="markup half"><span style="color: #007700">&lt;ul&gt;</span><br/><span style="color: #007700">&nbsp;&lt;li&gt;</span>Element 1<span style="color: #007700">&lt;/li&gt;</span><br/><span style="color: #007700">&lt;/ul&gt;</span><br/><span style="color: #007700">&lt;ul</span> <span style="color: #0000CC">class=</span><span style="color: rgb(190, 70, 0)">&quot;highlighted mw-collapsible-content&quot;</span><span style="color: #007700">&gt;</span><br/><span style="color: #007700">&nbsp;&lt;li&gt;</span>Element 2<span style="color: #007700">&lt;/li&gt;</span><br/><span style="color: #007700">&lt;/ul&gt;</span></td>
         <td class="half">
           <div class="mw-collapsible" data-expandtext="Show Detailed View" data-collapsetext="Hide Detailed View">
             <div class="mw-collapsible-toggle btn" style="float: left; display: block;">
@@ -391,452 +389,263 @@
         </td>
       </tr>
       <tr>
-          <td class="markup half"><span style="color: #007700">&lt;ol&gt;</span><br/><span style="color: #007700">&nbsp;&lt;li&gt;</span>Element 1<span style="color: #007700">&lt;/li&gt;</span><br/><span style="color: #007700">&lt;/ol&gt;</span><br/><span style="color: #007700">&lt;ol</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;highlighted mw-collapsible-content&quot;</span><span style="color: #0000CC">&nbsp;start=</span><span style="background-color: #fff0f0">&quot;2&quot;</span><span style="color: #007700">&gt;</span><br/><span style="color: #007700">&nbsp;&lt;li&gt;</span>Element 2<span style="color: #007700">&lt;/li&gt;</span><br/><span style="color: #007700">&lt;/ol&gt;</span></td>
-          <td class="half">
-            <div class="mw-collapsible" data-expandtext="Show Detailed View" data-collapsetext="Hide Detailed View">
-              <div class="mw-collapsible-toggle btn" style="float: left; display: block;">
-                <div class="toggle mw-collapsible-toggle-collapsed" role="button" tabindex="0"><span class="mw-collapsible-text">Hide Detailed View</span></div>
-              </div><br/><br/>
-              <ol>
-                <li>Element 1</li>
-              </ol>
-              <ol class="highlighted mw-collapsible-content" start="2">
-                <li>Element 2</li>
-              </ol>
-            </div>
-          </td>
-        </tr>
+        <td class="markup half"><span style="color: #007700">&lt;ol&gt;</span><br/><span style="color: #007700">&nbsp;&lt;li&gt;</span>Element 1<span style="color: #007700">&lt;/li&gt;</span><br/><span style="color: #007700">&lt;/ol&gt;</span><br/><span style="color: #007700">&lt;ol</span> <span style="color: #0000CC">class=</span><span style="color: rgb(190, 70, 0)">&quot;highlighted mw-collapsible-content&quot;</span><span style="color: #0000CC">&nbsp;start=</span><span style="color: rgb(190, 70, 0)">&quot;2&quot;</span><span style="color: #007700">&gt;</span><br/><span style="color: #007700">&nbsp;&lt;li&gt;</span>Element 2<span style="color: #007700">&lt;/li&gt;</span><br/><span style="color: #007700">&lt;/ol&gt;</span></td>
+        <td class="half">
+          <div class="mw-collapsible" data-expandtext="Show Detailed View" data-collapsetext="Hide Detailed View">
+            <div class="mw-collapsible-toggle btn" style="float: left; display: block;">
+              <div class="toggle mw-collapsible-toggle-collapsed" role="button" tabindex="0"><span class="mw-collapsible-text">Hide Detailed View</span></div>
+            </div><br/><br/>
+            <ol>
+              <li>Element 1</li>
+            </ol>
+            <ol class="highlighted mw-collapsible-content" start="2">
+              <li>Element 2</li>
+            </ol>
+          </div>
+        </td>
+      </tr>
     </table>
 
   <h3>Tables</h3>
 
-  <h3>Links</h3>
+  <table>
+    <tr>
+      <td><b> • table :</b></th>
+      <td><i>(tag)</i></td>
+      <td>Table</td>
+    </tr>
+    <tr>
+      <td><b> • tr :</b></th>
+      <td><i>(tag)</i></td>
+      <td>Table Row</td>
+    </tr>
+    <tr>
+      <td><b> • th :</b></th>
+      <td><i>(tag)</i></td>
+      <td>Table Header</td>
+    </tr>
+    <tr>
+      <td><b> • td :</b></th>
+      <td><i>(tag)</i></td>
+      <td>Table Detail</td>
+    </tr>
+    <tr>
+      <td><b> • wikitable :</b></th>
+      <td><i>(class)</i></td>
+      <td>Adds the Wikipedia table style to a table.</td>
+    </tr>
+    <tr>
+      <td><b> • sortable :</b></th>
+      <td><i>(class)</i></td>
+      <td>Adds sortable functionnality to a table.</td>
+    </tr>
+  </table>
 
+  <table class="wikitable markupTable">
+    <tr>
+      <th>Markup</th>
+      <th>Renders as</th>
+    </tr>
+    <tr>
+      <td class="markup half"><span style="color: #007700">&lt;table</span> <span style="color: #0000CC">class=</span><span style="color: rgb(190, 70, 0)">&quot;wikitable sortable&quot;</span><span style="color: #007700">&gt;</span><br/><span style="color: #007700">&nbsp;&lt;tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;th&gt;</span>Header 1<span style="color: #007700">&lt;/th&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;th&gt;</span>Header 2<span style="color: #007700">&lt;/th&gt;</span><br/><span style="color: #007700">&nbsp;&lt;/tr&gt;</span><br/><span style="color: #007700">&nbsp;&lt;tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td&gt;</span>Detail 1<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td&gt;</span>Detail 2<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&lt;/tr&gt;</span><br/><span style="color: #007700">&nbsp;&lt;tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td&gt;</span>Detail 3<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td&gt;</span>Detail 4<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&lt;/tr&gt;</span><br/><span style="color: #007700">&lt;/table&gt;</span>   
+      </td>
+      <td class="half">
+        <table class="wikitable sortable" style="margin-left:auto; margin-right:auto;">
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+          <tr>
+            <td>Detail 1</td>
+            <td>Detail 2</td>
+          </tr>
+          <tr>
+            <td>Detail 3</td>
+            <td>Detail 4</td>
+          </tr>
+        </table>   
+      </td>
+    </tr>
+  </table>
+
+  <h3>Links, Images and Files</h3>
+
+  <p><nowiki>Links, files, and images are all denoted in a similar fashion with the double square brackets and a vertical line separator as such “[[ | ]]”. For links the left side of the separator contains the URL of the link (if it is a wiki link the title of the page can be given). On right side of the separator is the name the user wishes to be displayed. Similar to links, files contain the file name to be displayed on the right side of the separator. The left side contains file name that was uploaded to the database separated by underscores. The left side also contains the prefix “Media:EN_-_”. An image is denoted the same way. Except the right side of the separator contains the size of the image in pixels (eg. 40px). The left side contains the name of the image with the prefix “File:”. Examples of all three can be seen below.</nowiki><br/></p>
+
+  <p>Images and files need to be uploaded to the database by clicking the “Upload file” link on the left side of the page.</p>
+
+  <table class="wikitable markupTable">
+    <tr>
+      <th class="half">Markup</th>
+      <th class="half">Renders as</th>
+    </tr>
+    <tr>
+        <td class="markup"><nowiki>[https://www.canada.ca/en.html Canada.ca]</nowiki></td>
+        <td style="text-align: center">[https://www.canada.ca/en.html Canada.ca]</td>
+      </tr>
+    <tr>
+      <td class="markup"><nowiki>[[Technology_Trends|Home Page]]</nowiki></td>
+      <td style="text-align: center">[[Technology_Trends|Home Page]]</td>
+    </tr>
+    <tr>
+      <td class="markup"><nowiki>[[Media:EN_-_Technology_Trends_-_User_Guide.pdf|User Guide pdf]]</nowiki></td>
+      <td style="text-align: center">[[Media:EN_-_Technology_Trends_-_User_Guide.pdf|User Guide pdf]]</td>
+    </tr>
+    <tr>
+      <td  class="markup"><nowiki>[[File:Traffic_cone.png|40px]]</nowiki></td>
+      <td style="text-align: center">[[File:Traffic_cone.png|40px]]</td>
+    </tr>
+  </table>
+  
   <h3>References</h3>
 
-  <h3>Images</h3>
+  <p><nowiki>References like other HTML tags are created with an opening <ref> tag and a closing </ref> tag. Within the reference tags the APA citation can be placed. After the citation a link can also be place with the same format as previously discussed or simply with one square bracket pair like “[ ]”. Doing so, will cause the citation in the text to appear as a number, as seen in the example below.</nowiki></p>
 
-  <h3>Documents</h3>
+  <table class="wikitable markupTable">
+    <tr>
+      <th class="half">Markup</th>
+      <th class="half">Notation</th>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td class="markup"><span style="color: #007700">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span style="color: #007700">&lt;ref&gt;</span>Wikipedia. (2019, September 1). <nowiki>[https://en.wikipedia.org/wiki/Main_Page Wikipedia]</nowiki>. Retrieved from Wikipedia<span style="color: #007700">&lt;/ref&gt;&lt;/p&gt;</span></td>
+      <td>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<sup><nowiki>[1]</nowiki></sup></p>
+        <p class="header2">References</p>
+        <ol>
+          <li>Wikipedia. (2019, September 1). [https://en.wikipedia.org/wiki/Main_Page Wikipedia]. Retrieved from Wikipedia</li>
+        </ol>
+      </td>
+    </tr>
+  </table>
 
   <h3>Main Pages</h3>
 
+  <p>Recent additions and bottom table</p>
 
+  <table class="wikitable markupTable">
+    <tr>
+      <th class="half">Markup</th>
+      <th class="half">Renders as</th>
+    </tr>
+    <tr>
+      <td class="markup"><span style="color: #007700">&lt;table&gt;</span><br/><span style="color: #007700">&nbsp;&lt;tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td&gt;</span><nowiki>[[File:Traffic_cone.png|40px]]</nowiki><span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td</span> <span style="color: #0000CC">class=</span><span style="color: rgb(190, 70, 0)">&quot;disclaimerText&quot;</span><span style="color: #007700">&gt;</span>Recent additions include <nowiki>[[Technology_Trends/Blockchain|Blockchain]], [[Technology_Trends/Drones|Drones]]</nowiki>.<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&lt;/tr&gt;</span><br/><span style="color: #007700">&lt;/table&gt;</span></td>
+      <td>
+        <table class="disclaimer" style="margin: auto;"><tr>
+          <td>[[File:Traffic_cone.png|40px]]</td>
+          <td class="disclaimerText">Recent additions include [[Technology_Trends/Blockchain|Blockchain]], [[Technology_Trends/Drones|Drones]].</td>
+        </tr></table>
+      </td>
+    </tr>
+    <tr>
+      <td class="markup"><span style="color: #007700">&lt;table</span> <span style="color: #0000CC">class=</span><span style="color: rgb(190, 70, 0)">&quot;wikitable sortable technology-table&quot;</span> <span style="color: #0000CC">style=</span><span style="color: rgb(190, 70, 0)">&quot;border: 0px solid;&quot;</span><span style="color: #007700">&gt;</span><br/><span style="color: #007700">&nbsp;&lt;tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;th</span> <span style="color: #0000CC">colspan=</span><span style="color: rgb(190, 70, 0)">&quot;3&quot;</span><span style="color: #007700">&gt;</span>Name<span style="color: #007700">&lt;/th&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;th&gt;</span>Status<span style="color: #007700">&lt;/th&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;th</span> <span style="color: #0000CC">style=</span><span style="color: rgb(190, 70, 0)">&quot;white-space: nowrap;&quot;</span><span style="color: #007700">&gt;</span>Release Date<span style="color: #007700">&lt;/th&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;th&gt;</span>Official Publications<span style="color: #007700">&lt;/th&gt;</span><br/><span style="color: #007700">&nbsp;&lt;/tr&gt;</span><br/><span style="color: #007700">&nbsp;&lt;tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td</span> <span style="color: #0000CC">style=</span><span style="color: rgb(190, 70, 0)">&quot;border-right: 0px solid; text-align:right;&quot;</span><span style="color: #007700">&gt;</span>[[Technology_Trends/Blockchain|Blockchain]]<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td</span> <span style="color: #0000CC">style=</span><span style="color: rgb(190, 70, 0)">&quot;border-left: 0px solid; border-right: 0px solid;&quot;</span><span style="color: #007700">&gt;</span>-<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td</span> <span style="color: #0000CC">style=</span><span style="color: rgb(190, 70, 0)">&quot;border-left: 0px solid; text-align:left&quot;</span><span style="color: #007700">&gt;</span>[[Tendances_Technologiques/Chaîne_de_Blocs|Chaîne de Blocs]]<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td&gt;</span>Published<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td&gt;</span>2019-05-23<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td&gt;</span>[[Media:EN_-_Technology_Trends_-_Blockchain.pdf|EN]] - [[Media:FR_-_Tendances_Technologiques_-_Blockchain.pdf|FR]]<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&lt;/tr&gt;</span><br/><span style="color: #007700">&nbsp;&lt;tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td</span> <span style="color: #0000CC">style=</span><span style="color: rgb(190, 70, 0)">&quot;border-right: 0px solid; text-align:right;&quot;</span><span style="color: #007700">&gt;</span>3D XPoint (Optane)<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td</span> <span style="color: #0000CC">style=</span><span style="color: rgb(190, 70, 0)">&quot;border-left: 0px solid; border-right: 0px solid;&quot;</span><span style="color: #007700">&gt;</span>-<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td</span> <span style="color: #0000CC">style=</span><span style="color: rgb(190, 70, 0)">&quot;border-left: 0px solid; text-align:left&quot;</span><span style="color: #007700">&gt;</span>3D XPoint (Optane)<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td&gt;</span>Development<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td&gt;</span>FY 19-20 Q2<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&lt;/tr&gt;</span><br/><span style="color: #007700">&lt;/table&gt;</span>
+      </td>
+      <td>
+        <table class="wikitable sortable technology-table" style="border: 0px solid;">
+          <tr>
+            <th colspan="3">Name</th>
+            <th>Status</th>
+            <th style="white-space: nowrap;">Release Date</th>
+            <th>Official Publications</th>
+          </tr>
+          <tr>
+            <td style="border-right: 0px solid; text-align:right;">[[Technology_Trends/Blockchain|Blockchain]]</td>
+            <td style="border-left: 0px solid; border-right: 0px solid;">-</td>
+            <td style="border-left: 0px solid; text-align:left">[[Tendances_Technologiques/Chaîne_de_Blocs|Chaîne de Blocs]]</td>
+            <td>Published</td>
+            <td>2019-05-23</td>
+            <td>[[Media:EN_-_Technology_Trends_-_Blockchain.pdf|EN]] - [[Media:FR_-_Tendances_Technologiques_-_Blockchain.pdf|FR]]</td>
+          </tr>
+          <tr>
+            <td style="border-right: 0px solid; text-align:right;">3D XPoint (Optane)</td>
+            <td style="border-left: 0px solid; border-right: 0px solid;">-</td>
+            <td style="border-left: 0px solid; text-align:left">3D XPoint (Optane)</td>
+            <td>Development</td>
+            <td>FY 19-20 Q2</td>
+            <td></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
 
+  <h3>Hype cycle table</h3>
 
+  <p>Hype cycle table, example using blockchain</p>
 
+  <table class="wikitable markupTable">
+    <tr>
+      <th class="half">Markup</th>
+      <th class="half">Notation</th>
+    </tr>
+    <tr>
+      <td class="markup"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="color: rgb(190, 70, 0)">&quot;container&quot;</span><span style="color: #007700">&gt;</span><br/><span style="color: #007700">&nbsp;&lt;div</span> <span style="color: #0000CC">class=</span><span style="color: rgb(190, 70, 0)">&quot;row&quot;</span><span style="color: #007700">&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;div</span> <span style="color: #0000CC">class=</span><span style="color: rgb(190, 70, 0)">&quot;col-sm-8&quot;</span><span style="color: #007700">&gt;</span><nowiki>[[File:EN_Technology_Trends_-_Blockchain_Hype_Cycle_2018.png|center]]</nowiki><span style="color: #007700">&lt;/div&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;div</span> <span style="color: #0000CC">class=</span><span style="color: rgb(190, 70, 0)">&quot;col-sm-4&quot;</span><span style="color: #007700">&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&lt;table</span> <span style="color: #0000CC">class=</span><span style="color: rgb(190, 70, 0)">&quot;wikitable hypecycleTable&quot;</span><span style="color: #007700">&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;</span>English<span style="color: #007700">&lt;/th&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;</span>Français<span style="color: #007700">&lt;/th&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;</span>Figure 1. Hype Cycle for Blockchain Technologies, 2018<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;</span>Figure 1. Rapport Hype Cycle sur les technologies de la chaîne de blocs, 2018<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;</span>Expectations<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;</span>Attentes<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;</span>Time<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;</span>Temps<span style="color: #007700">&lt;/td&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&nbsp;&lt;/table&gt;</span><br/><span style="color: #007700">&nbsp;&nbsp;&lt;/div&gt;</span><br/><span style="color: #007700">&nbsp;&lt;/div&gt;</span><br/><span style="color: #007700">&lt;/div&gt;</span>
+      </td>
+      <td>
+        <table>
+          <tr>
+            <td><b> • div :</b></th>
+            <td><i>(tag)</i></td>
+            <td>Division</td>
+          </tr>
+          <tr>
+            <td><b> • container :</b></th>
+            <td><i>(class)</i></td>
+            <td>Creates a container for a group of elements.</td>
+          </tr>
+          <tr>
+            <td><b> • row :</b></th>
+            <td><i>(class)</i></td>
+            <td>Creates an inline space inside the container.</td>
+          </tr>
+          <tr>
+            <td><b> • col-sm-8 :</b></th>
+            <td><i>(class)</i></td>
+            <td>Creates a column of width 8/12.</td>
+          </tr>
+          <tr>
+            <td><b> • col-sm-4 :</b></th>
+            <td><i>(class)</i></td>
+            <td>Creates a column of width 4/12.</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th colspan="2">Renders as</th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">[[File:EN_Technology_Trends_-_Blockchain_Hype_Cycle_2018.png|center]]</div>
+            <div class="col-sm-4">
+              <table class="wikitable hypecycleTable">
+                <tr>
+                  <th>English</th>
+                  <th>Français</th>
+                </tr>
+                <tr>
+                  <td>Figure 1. Hype Cycle for Blockchain Technologies, 2018</td>
+                  <td>Figure 1. Rapport Hype Cycle sur les technologies de la chaîne de blocs, 2018</td>
+                </tr>
+                <tr>
+                  <td>Expectations</td>
+                  <td>Attentes</td>
+                </tr>
+                <tr>
+                  <td>Time</td>
+                  <td>Temps</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
   
-
-  <h2>Technology Trend Publishing</h2>
-
-  <h2>Technology Brief</h2>
-
-  <h2>Industry Use</h2>
-
-  <h2>Canadian Government Use</h2>
-
-  <h2>Implications for Government Agencies</h2>
-
-  <h3>Shared Services Canada (SSC)</h3>
-
-  <h4>Value Proposition</h4>
-
-  <h4>Challenges</h4>
-
-  <h4>Considerations</h4>
-
-  <h2>References</h2>
-
-  <p class="inline">Low-code</p><p class="highlighted inline mw-collapsible-content"> (Some industry analysts and vendors of low-code systems use very different terminology, for example: Gartner uses high-productivity application Platform-as-a-Service (hpaPaaS).)</p><p class="inline"> is built on the concept of higher abstraction levels, where the developer can directly express business processes and requirements without getting mired in coding details. For some apps developed in low-code, a small amount of simple code is typically still written by hand – especially for applications not following one of the vast number of built-in templates. (Those requiring absolutely no handwritten code are referred to as no-code apps.) This reduction in manual coding has some important effects:</p>
-
-  <ul>
-    <li>App development (including feature capture, testing/validation and deployment) proceeds much faster than usual – enabling agile development, and reducing cost and improving time-to-market. As a side effect, this also reduces the number of errors and requirements mismatches.</li>
-    <li>Less coding (and less intricate coding) allows a broader range of people to engage in app development – no longer limiting this to highly skilled programmers (who are typically rare, talented, and expensive).</li>
-    <li>Low-code originally catered to apps-from-scratch, but is now also able to integrate legacy or third party systems (e.g. ERPs and databases such as SAP, Oracle, DB2, SQL Server, etc.) to build complete apps even more quickly.</li>
-  </ul>
-
-  <p>Low-code is not without its challenges:</p>
-
-  <ul>
-    <li>Finding developers: despite the low technical barrier to usage, most low-code systems are proprietary and require at least a modest amount of system-specific training.</li>
-    <li>Highly skilled traditional developers often view low-code with skepticism and defensiveness – partly due to the slow devaluation of the traditional skill set.</li>
-    <li>Licensing costs are often opaque and somewhat higher than those of traditional development environments and tools (many of which are open-source).</li>
-  </ul>
-
-  <p>According to the March 2019 Forrester Wave report, the current leading low-code systems (out of a total of 13 evaluated in this latest report) are Microsoft PowerApps, OutSystems, and Mendix (now acquired by Siemens), with Kony and Salesforce following closely. Similar vendor rankings are also given by Gartner, Ovum, and IDC.</p>
-
-  <h2>Technology Brief</h2>
-
-  <p>Briefly, low-code is a development environment and runtime platform that allows for building apps of almost any kind (with the exception of deeply embedded or very high-performance apps) while only writing a very small amount of simple code. In many cases, absolutely no code is written – making them “no code apps.”</p>
-
-  <p>To the low code developer (often someone more specialized in the application domain than in coding), the low-code tool appears like most integrated development environments (IDEs). Instead of a window in which to type code, the functionality of the application is built visually. That likely starts with drawing the windows of the application, and attaching actions (again, visually) to the various GUI elements such as buttons, drop-down menus, list boxes, etc. In general, many apps support a business process, which is then drawn diagrammatically in low-code. Each step in the business process may activate other windows or take some further action.</p>
-
-  <p>Such actions can involve communicating with other applications (such as email), pulling in documents, consulting a database, or taking remote action. Creating an interaction with another application is usually a simple visual connection diagrammatically, and most low-code systems support APIs (which remain only visual in low-code) to a vast number of other vendors’ applications. Similarly, pulling in documents/files is done visually, along with any processing of such files – including sharing them remotely.</p>
-
-  <p>One of the most significant wins in low-code is database integration: the developer drags and drops a database, which is usually then autodiscovered by the low-code environment, making the structure of the database visually obvious. The developer may then visually create database queries (in a form of visual SQL), and use those results for further processing or display in a window. Naturally, various operations across databases are also supported. The leading vendors of low-code support all of the major databases across many versions. In a limited number of cases, a very complex database query must be written by hand in SQL – though that process is coached by intelligent assistants within the tool, and is done visually.</p>
-
-  <p>Most real-life app development involves interfacing to legacy systems – something also well enabled in low-code. Such legacy systems (e.g. SAP, some other ERP, or database) appear as connectors in a palette of supported systems, which can then be used visually, while the low-code system manages the actual API usage.</p>
-
-  <p>All of the low-code systems have extensive palettes of additional components – in many cases written by the low-code vendor in other languages for performance reasons. Some of the pre-built components include:</p>
-
-  <ul>
-    <li>Location services using GPS on mobile devices.</li>
-    <li>Cloud support for all of the major vendors, as well as private clouds.</li>
-    <li>Cameras, including gesture and facial recognition, etc.</li>
-    <li>Audio support, including sound generation and voice recognition/synthesis.</li>
-    <li>Multilanguage support.</li>
-    <li>Internet-of-Things (IoT) interfaces and complex event processing.</li>
-    <li>Log file and audit trail support in applications requiring governance.</li>
-    <li>Security primitives, such as encryption, signatures, and authentication.</li>
-    <li>Machine learning and artificial intelligence engines.</li>
-    <li>Visualizations for large-scale data.</li>
-    <li>Back-end interfaces to big-data systems such as Hadoop.</li>
-  </ul>
-
-  <p>Low-code tools additionally have user communities contributing new components or wrappers for legacy systems, and proficient programmers (in other languages such as Java, C++, C#, etc.) can easily produce their own components as needed. The leading low-code vendors have extensive support for mobile and desktop apps, including keyboards, styluses, and touch-screens. Much of that support is encapsulated in a single project, meaning that a mobile version of an app can be co-developed with the desktop version.</p>
-
-  <p>Low-code environments directly support version control through a variety of interfaces such as to Git, Mercurial, Subversion, etc. This allows not only for the safety of being able to roll back changes, but also for multi-developer projects.</p>
-
-  <p>Following the assembly of the app, the low-code environment allows for immediately testing/debugging it without a long compile-build cycle. This directly supports agile development and co-refinement of requirements where domain experts/users can make adjustments to the app as early as possible. Such testing can be done in a staged testing platform with test databases, etc.</p>
-
-  <p>Finally, deployment is usually a single-step process in its lifecycle  manager, where the low-code environment is aware of the deployment platform’s parameters and the app can be pushed directly into production and use. Should anything go wrong, rolling back to a previous version is usually equally easy.</p>
-
-  <p>Under the hood, low-code is of course also making use of traditional programming languages and tools – though this is not usually visible to the developer. The visual programming is translated directly into C#, Java or similar (some platforms such as OutSystems support both), which is then compiled using the normal development tool-chain. The low-code environment tracks the minimal amount of code generation and recompiles, allowing for a very interactive development experience oriented towards experimentation and prototyping. The output C# or Java can also be used standalone in case of a move away from low-code, though the actual code is often not elegant enough for true understandability.</p>
-
-  <h2>Industry Use</h2>
-
-  <p class="inline">All of the major technical industry analysts (Forrester, Gartner, Ovum, and IDC) have reported on low-code for a number of years – following Forrester naming it “low-code” in 2014. Those reports have at times identified up to fifty providers of low-code environments over the past decade. Some of those providers have faded, while three have emerged as the leading providers of very broad low-code solutions</p><p class="highlighted inline mw-collapsible-content"> (A broad solution is one able to interface to many other types of components (both legacy or written in other programming languages), runs on several platforms, is able to produce apps of all types.)</p><p class="inline"> : Mendix (now a part of Siemens), Microsoft (with PowerApps), and OutSystems. The Forrester Wave from March 2019 is shown in Figure 1, while the 2018 Gartner Magic Quadrant is shown in Figure 2.
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        [[File:Technology_Trends_-_Low_Code_Application_Development_Forrester_Wave.png|center]]
-
-        <p class="source">Figure 1 The Forrester Wave: Low-Code Development Platforms for AD&D Professionals, Q1 2019. Used without permission.</p>
-      </div>
-      <div class="col-sm-6">
-        <table class="wikitable hypecycleTable">
-          <tr>
-            <th>English</th>
-            <th>Français</th>
-          </tr>
-          <tr>
-            <td>Challengers</td>
-            <td>Nouveaux fournisseurs</td>
-          </tr>
-          <tr>
-            <td>Contenders</td>
-            <td>Fournisseurs concurrents</td>
-          </tr>
-          <tr>
-            <td>Strong Performers</td>
-            <td>Fournisseurs performants</td>
-          </tr>
-          <tr>
-            <td>Leaders</td>
-            <td>Chefs de file</td>
-          </tr>
-          <tr>
-            <td>Stronger current offering</td>
-            <td>Offres actuelles les plus intéressantes</td>
-          </tr>
-          <tr>
-            <td>Weaker current offering</td>
-            <td>Offres actuelles les moins intéressantes</td>
-          </tr>
-          <tr>
-            <td>Weaker strategy</td>
-            <td>Stratégie plus faible</td>
-          </tr>
-          <tr>
-            <td>Stronger strategy</td>
-            <td>Stratégie plus solide</td>
-          </tr>
-          <tr>
-            <td>Market presence</td>
-            <td>Présence sur le marché</td>
-          </tr>
-          <tr>
-            <td>OutSystems</td>
-            <td>OutSystems</td>
-          </tr>
-          <tr>
-            <td>Mendix</td>
-            <td>Mendix</td>
-          </tr>
-          <tr>
-            <td>Kony</td>
-            <td>Kony</td>
-          </tr>
-          <tr>
-            <td>Microsoft</td>
-            <td>Microsoft</td>
-          </tr>
-          <tr>
-            <td>Salesforce</td>
-            <td>Salesforce</td>
-          </tr>
-          <tr>
-            <td>ServiceNow</td>
-            <td>ServiceNow</td>
-          </tr>
-          <tr>
-            <td>GeneXus</td>
-            <td>GeneXus</td>
-          </tr>
-          <tr>
-            <td>Progress Software</td>
-            <td>Progress Software</td>
-          </tr>
-          <tr>
-            <td>WaveMaker</td>
-            <td>WaveMaker</td>
-          </tr>
-          <tr>
-            <td>MatsSoft</td>
-            <td>MatsSoft</td>
-          </tr>
-          <tr>
-            <td>Thinkwise</td>
-            <td>Thinkwise</td>
-          </tr>
-          <tr>
-            <td>Skuid</td>
-            <td>Skuid</td>
-          </tr>
-          <tr>
-            <td>Clear Software</td>
-            <td>Clear Software</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <p>Among other requirements, the systems featured in the Forrester Wave were chosen because they each:
-
-  <ol>
-    <li>Offer a comprehensive declarative development approach: the level of abstraction matches that of the client, which is critical for expressing the requirements.</li>
-    <li>Provide a low-cost-of-entry commercial model: they allow for free trials, and provide online training material.</li>
-    <li>Support building many business use cases, from web and mobile apps to database, event processing, IoT, and business process apps.</li>
-    <li>Primarily target large enterprises: revenue over a billion USD and geographically dispersed teams.</li>
-  </ol>
-
-  <p class="inline">Websites of the low-code tool leaders typically provide reference customers, and these include numerous prominent banks, insurance companies, airlines, government departments, and the US Army – though in most cases no details are given about the precise application domain. Most of the analysts’ reports, as well as self-reporting by OutSystems and Mendix, indicate that 88% of companies are adopting low-code, while 74% of those companies are integrating the business side into low-code development, thereby directly involving the clients who dictate the requirements.</p><p class="highlighted inline mw-collapsible-content"> ([https://www.mendix.com/why-developers-should-embrace-low-code/ Example])</p>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        [[File:Technology_Trends_-_Low_Code_Application_Development_Gartner_Magic_Quadrant.png|center]]
-
-        <p class="source">Figure 2 : Magic Quadrant de Gartner – Plate-forme d’application d’entreprise comme service à haute productivité. Utilisé sans autorisation.</p>
-      </div>
-      <div class="col-sm-6">
-        <table class="wikitable hypecycleTable">
-          <tr>
-            <th>English</th>
-            <th>Français</th>
-          </tr>
-          <tr>
-            <td>OutSystems</td>
-            <td>OutSystems</td>
-          </tr>
-          <tr>
-            <td>Mendix</td>
-            <td>Mendix</td>
-          </tr>
-          <tr>
-            <td>ServiceNow</td>
-            <td>ServiceNow</td>
-          </tr>
-          <tr>
-            <td>Microsoft</td>
-            <td>Microsoft</td>
-          </tr>
-          <tr>
-            <td>Kintone</td>
-            <td>Kintone</td>
-          </tr>
-          <tr>
-            <td>Caspio</td>
-            <td>Caspio</td>
-          </tr>
-          <tr>
-            <td>AgilePoint</td>
-            <td>AgilePoint</td>
-          </tr>
-          <tr>
-            <td>MatsSoft</td>
-            <td>MatsSoft</td>
-          </tr>
-          <tr>
-            <td>Bpm’online</td>
-            <td>Bpm’online</td>
-          </tr>
-          <tr>
-            <td>Quick Base</td>
-            <td>Quick Base</td>
-          </tr>
-          <tr>
-            <td>TrackVia</td>
-            <td>TrackVia</td>
-          </tr>
-          <tr>
-            <td>Fujitsu</td>
-            <td>Fujitsu</td>
-          </tr>
-          <tr>
-            <td>OrangeScape</td>
-            <td>OrangeScape</td>
-          </tr>
-          <tr>
-            <td>Zoho</td>
-            <td>Zoho</td>
-          </tr>
-          <tr>
-            <td>Betty Blocks</td>
-            <td>Betty Blocks</td>
-          </tr>
-          <tr>
-            <td>Kony</td>
-            <td>Kony</td>
-          </tr>
-          <tr>
-            <td>Appian</td>
-            <td>Appian</td>
-          </tr>
-          <tr>
-            <td>Oracle</td>
-            <td>Oracle</td>
-          </tr>
-          <tr>
-            <td>Pegasystems</td>
-            <td>Pegasystems</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <h2>Canadian Government Use</h2>
-
-  <p>Modern low-code can literally be used in all application areas except for deeply embedded systems and very high-performance computing, though even in those two areas, low-code can provide much of an app while interfacing to software components written in other programming languages.
-
-  <p>Given this breadth, literally all IT application areas of the Canadian Government are candidates for low-code. For example:
-
-  <ul>
-    <li>Apps consisting of a business process, including interfaces to document/content management, emails for reminders, etc.</li>
-    <li>Data gathering and database apps that interface to large scale and distributed data storage – including managing identity and privacy.</li>
-    <li>Communication and task management apps that allow for chats, emails, video conferencing, and calendar management.</li>
-    <li>Data-science and visualization apps that potentially contain some machine learning or artificial intelligence to process and present large amounts of data.</li>
-  </ul>
-
-  <p>Analyst group IDG and OutSystems have specifically explored OutSystems for digital government, basing their evaluation on the goals shown in Figure 3, though the conclusions are valid for all low-code systems. In particular, low-code can simultaneously increase quality while decreasing service delivery costs.</p>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        [[File:Technology_Trends_-_Low_Code_Application_Development_Top_Goals.png|center]]
-
-        <p class="source">Figure 3 Top Goals with Respect to the Digital Experience Provided for Citizens. Used without permission from: Improving Digital Experience for End Users in the Public Sector, IDG Research Services, December 2018.</p>
-      </div>
-      <div class="col-sm-6">
-        <table class="wikitable hypecycleTable">
-          <tr>
-            <th>English</th>
-            <th>Français</th>
-          </tr>
-          <tr>
-            <td>Increase the quality of citizen user experience</td>
-            <td>Accroître la qualité de l’expérience utilisateur du citoyen</td>
-          </tr>
-          <tr>
-            <td>Lower service delivery costs</td>
-            <td>Diminuer les coûts de la prestation des services</td>
-          </tr>
-          <tr>
-            <td>Improve data security</td>
-            <td>Améliorer la sécurité des données</td>
-          </tr>
-          <tr>
-            <td>Provide better access to data and information</td>
-            <td>Offrir un meilleur accès aux données et à l’information</td>
-          </tr>
-          <tr>
-            <td>Increase speed of service delivery</td>
-            <td>Accroître la rapidité de la prestation des services</td>
-          </tr>
-          <tr>
-            <td>Reduce staff time spent addressing citizen/student requests, questions, complaints</td>
-            <td>Réduire le temps consacré par le personnel à la résolution des demandes de renseignements, des questions et des plaintes des citoyens et des étudiants</td>
-          </tr>
-          <tr>
-            <td>Increase usage or programs/generate revenue</td>
-            <td>Accroître l’utilisation des programmes et générer des revenus</td>
-          </tr>
-          <tr>
-            <td>Develop user profiles to personalize transactions</td>
-            <td>Créer des profils d’utilisateurs pour personnaliser les transactions</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <p class="expand mw-collapsible-content">It is worth noting that achieving these goals (likely via low-code) fits into the higher levels of Gartner's Digital Government Maturity Model (such as Level 4 and Level 5).</p>
-
-  <h2>Implications for Government Agencies</h2>
-
-  <h3>Shared Services Canada (SSC)</h3>
-
-  <h4>Value Proposition</h4>
-
-  <p>Given SSC’s heavy involvement in IT services and management, the value proposition of low-code relies on the production, deployment and maintenance of apps. Low-code moves app development to higher abstract levels (such as directly modeling business processes, etc.) and requires far less code to be written, giving the following specific value propositions:</p>
-
-  <ol>
-    <li>Shorter time-to-market, giving higher client satisfaction, more accurate schedules, and also less temptation to build workarounds or purchase ill-fitting temporary solutions.</li>
-    <li>Fewer person-hours of development, giving lower cost.</li>
-    <li>Broadening the pool of potential app developers, alleviating staffing pressure, and potentially lower costs while shortening development timelines.</li>
-    <li>Direct integration of legacy systems, allowing for incremental roll-out and use of low-code for cost and risk management.</li>
-    <li>More accurately capturing and building for customer requirements, leading to lower rework and maintenance costs.</li>
-  </ol>
-
-  <h4>Challenges</h4>
-
-  <p>While low-code vendors pitch it as a solution to all app projects, it is not without its challenges and issues, all of which are relevant to SSC:</p>
-  <ul>
-    <li>The nature of low-code is to allow for non-coders (ideally, domain experts for the client) to create apps, however, low-code environments are largely proprietary and require at least a modest amount of training. This applies even to highly skilled developers.</li>
-    <li>Most organizations experience some pushback from traditional developers, partly due to skepticism, though often due to defensiveness as more (and cheaper) people become “developers.”</li>
-    <li>Most traditional development environments involve a one-off purchase of the IDE, however, low-code licenses are considerably more complex, often involving per-deployed-app costs. Those costs are sometimes opaque and need to be fully worked through for the ROI analysis.</li>
-    <li><p class="inline">There are several low-code systems to choose from, though the current leaders (which include Mendix, Microsoft and OutSystems) have consistently been ahead of the pack</p><p class="highlighted inline mw-collapsible-content"> (That is not quite true for Microsoft, which is relatively new to low-code, though their development environments and general platforms are very mature and strategic.)</p><p class="inline">. Which platforms to choose is a challenge that depends heavily on legacy software to be supported, existing deployment platforms, etc. Supporting more than one low-code platform will bring its own challenges.</li>
-    <li>The proprietary nature of low-code gives a certain level of “lock-in,” preventing SSC from changing vendor or leaving low-code altogether. Vendors usually portray low-code as having no lock-in because C# or Java code is generated, which may be maintained further without low-code. In practice, this is not true for large apps.</li>
-    <li>Low-code’s ease (“democratization”) of app development can cause problems for SSC: clients will be tempted to develop on their own if SSC is not fast enough, thereby creating a shadow IT (hidden/skunk works) mentality. If allowed to grow, this will create maintenance issues as well as an existential problem for SSC.</li>
-    <li>Security has been the chronic weak link in low-code, and vendors are only now attending to it in a structural way. Security primitives have long been available in low-code development palettes, but their use has not been obligatory and they are not interwoven with the environment.</li>
-  </ul>
-
-  <h4>Considerations</h4>
-
-  <p>In choosing whether, how, or when to move to low-code, SSC has numerous considerations. SSC would obviously gain from the low-code efficiency improvement, and the main considerations revolve around when, how, and on what scale to move to low-code. As clients become aware of SSC’s low-code plans, they will exert increasing pressure to shorten timelines/schedules as well as lower project costs. SSC will need to consider even more agility in client interactions, as well as involving them more directly in projects using low-code – all while SSC retains direct control over app development. Regardless of how fast SSC adopts low-code, there is a risk that its popularity is picked up by forward-looking (or desperate) clients that initiate Shadow IT low-code projects. Completely preventing such projects will be difficult, and SSC must consider how to bring such projects “in from the cold,” to be integrated and supported from inside SSC.</p>
-
-  <p>Rolling out low-code in SSC also requires some other considerations. Despite its simplicity, low-code will require at least a modest amount of developer training. This would have to be coupled with change management to integrate and not alienate traditional developers into the move; not doing so risks creating a two-tier developer corps, or having traditional developers actively working against the low-coders. SSC will need to consider a sequence of projects appropriate for low-code – whether based on risk-management/criticality or potential for savings. The security needs of SSC are somewhat unique (thanks to the broad cross section of clients), and ensuring low-code adequately supports security is a challenge needing exploration.</p>
-
-  <p>SSC should consider a low-code trial for several reasons: gaining exposure, evaluating low-code tools, and quantifying the ROI (at least for one project). Ideally, all of the leading low-code systems should be evaluated – though the field may be thinned (e.g. to Microsoft PowerApps or OutSystems) based on breadth of the system as well as the match to existing technologies in-use by SSC. During the trial, several aspects should be measured: training cost (which is then translated to amortized training costs as they would be across several projects), amortized licensing costs, elapsed time, client satisfaction, and amortized maintenance costs.</p>
-
-  <h2>References</h2>
-
-  <ol>
-    <li>Appian. (2016). <i>[https://www.appian.com/assets/sites/14/2016/12/low-code-guide.pdf Low-Code Guide].</i> Retrieved from appian.com</li>
-    <li>Azoff, M. (2018, April 13).<i>[https://ovum.informa.com/resources/product-content/ovum-decision-matrix-selecting-an-enterprise-mobile-application-development-platform-201819 Ovum Decision Matrix: Selecting an Enterprise Mobile Application Development Platform, 2018–19].</i> Retrieved from ovum.informa.com</li>
-    <li>Maio, A. D., & Howard, R. (2018, November 2).<i>[https://www.gartner.com/doc/reprints?id=1-667LEM1&ct=190130&st=sb Introducing the Gartner Digital Government Maturity Model 2.0].</i> Retrieved from gartner.com</li>
-    <li>Marvin, R. (2018, August 10).<i>[https://www.pcmag.com/roundup/353252/the-best-low-code-development-platforms The Best Low-Code Development Platforms for 2019].</i> Retrieved from pcmag.com</li>
-    <li>Mendix. (2019, July 4).<i>[https://www.mendix.com/why-developers-should-embrace-low-code/ App dev has evolved: Why developers need to embrace Low-Code].</i> Retrieved from mendix.com</li>
-    <li>Outsystems. (2019, March 26).<i>[https://www.outsystems.com/1/idg-report-low-code-development-local-government/ Accelerating Digital Government With Low-Code Development].</i> Retrieved from outsystems.com</li>
-    <li>Revell, M. (2019, February 7).<i>[https://www.outsystems.com/blog/what-is-low-code.html What Is Low-Code?]</i> Retrieved from outsystems.com</li>
-    <li>Rymer, J. R., Koplowitz, R., Mines, C., Sjoblom, S., & Turley, C. (2019, March 13).<i>[https://reprints.forrester.com/#/assets/2/160/RES144387/reports The Forrester Wave™: Low-Code Development Platforms For AD&D Professionals, Q1 2019].</i> Retrieved from reprints.forrester.com</li>
-    <li>Vincent, P., Baker, V., Natis, Y., Iijima, K., Driver, M., Dunie, R., . . . Gupta, A. (2018, April 26).<i>[https://www.gartner.com/doc/reprints?id=1-4XVPI4N&ct=180430&st=sb Magic Quadrant for Enterprise High-Productivity Application Platform as a Service].</i> Retrieved from gartner.com</li>
-    <li>Wikipedia. (2019, July 18).<i>[https://en.wikipedia.org/wiki/Low-code_development_platform Low-code development platform].</i> Retrieved from en.wikipedia.org</li>
-  </ol>
-</div>
-
 {{#css:
 
   #firstHeading::after{
@@ -987,6 +796,11 @@
     height: auto;
     line-height: 27.3px;
     text-decoration: underline;
+  }
+
+  .centered{
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #blueText { color: blue; }
